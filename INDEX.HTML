@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Air Heating & Cooling | Professional HVAC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Base Setup */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #0b132b; overflow-x: hidden; }
+
+        /* Hero Section with Technician Background */
+        .hero {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Glass Container Styling */
+        .glass-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 50px 30px;
+            border-radius: 24px;
+            text-align: center;
+            color: white;
+            max-width: 950px;
+            width: 90%;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+
+        /* Bold Branding Title */
+        .glass-box h1 {
+            font-family: 'Passion One', cursive;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* CYCLING SENTENCE ANIMATION */
+        .sentence-wrapper {
+            font-size: 1.3rem;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .word-switcher {
+            margin-left: 8px;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .word-switcher ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            animation: scrollHomeBusiness 6s infinite;
+        }
+
+        .word-switcher ul li {
+            height: 40px;
+            line-height: 40px;
+            color: #007bff;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        @keyframes scrollHomeBusiness {
+            0%, 45% { transform: translateY(0); }
+            55%, 95% { transform: translateY(-40px); }
+            100% { transform: translateY(-80px); }
+        }
+
+        /* Button Styling */
+        .btn-blue {
+            background-color: #007bff;
+            color: white;
+            padding: 16px 45px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            display: inline-block;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+        }
+        .btn-blue:hover { transform: translateY(-3px); background-color: #0056b3; }
+
+        /* THIN MANUFACTURER CAROUSEL */
+        .trust-slider {
+            background: #ffffff;
+            padding: 20px 0;
+            overflow: hidden;
+            border-top: 4px solid #007bff;
+        }
+        .slider-track {
+            display: flex;
+            width: calc(200px * 14);
+            animation: scrollLogos 40s linear infinite;
+            align-items: center;
+        }
+        .slider-track img { height: 30px; margin: 0 40px; filter: grayscale(100%); opacity: 0.5; }
+
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-200px * 7)); }
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 100px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .services-intro h2 {
+            font-family: 'Passion One', cursive;
+            font-size: 3.5rem;
+            color: #0b132b;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .services-intro p {
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+            font-size: 1.1rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s ease;
+            border-bottom: 5px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 5px solid #007bff;
+        }
+
+        .service-card h3 {
+            font-family: 'Passion One', cursive;
+            font-size: 1.8rem;
+            margin: 20px 0 10px 0;
+            color: #0b132b;
+            text-transform: uppercase;
+        }
+
+        .service-icon { font-size: 3.5rem; }
+
+        /* CONTACT SECTION */
+        .contact {
+            padding: 100px 20px;
+            background-color: #0b132b;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: 'Passion One', cursive;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .contact-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            text-align: left;
+        }
+
+        .contact-info h3 {
+            font-family: 'Passion One', cursive;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        footer {
+            padding: 40px 20px;
+            background-color: #080f21;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="glass-box">
+            <h1>EXTREME AIR<br>HEATING & COOLING</h1>
+            <div class="sentence-wrapper">
+                <span>Reliable heating and cooling solutions for your </span>
+                <div class="word-switcher">
+                    <ul>
+                        <li>Home</li>
+                        <li>Business</li>
+                        <li>Home</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="tel:7327142424" class="btn-blue">GET A FREE QUOTE</a>
+        </div>
+    </section>
+
+    <div class="trust-slider">
+        <div class="slider-track">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Carrier_Logo.svg" alt="Carrier">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Trane_logo.svg" alt="Trane">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Rheem_logo.svg" alt="Rheem">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Lennox_International_logo.png" alt="Lennox">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/York_International_logo.svg" alt="York">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Goodman_Manufacturing_logo.svg" alt="Goodman">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Daikin_logo.svg" alt="Daikin">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Carrier_Logo.svg" alt="Carrier">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Trane_logo.svg" alt="Trane">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Rheem_logo.svg" alt="Rheem">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Lennox_International_logo.png" alt="Lennox">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/York_International_logo.svg" alt="York">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Goodman_Manufacturing_logo.svg" alt="Goodman">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Daikin_logo.svg" alt="Daikin">
+        </div>
+    </div>
+
+    <section class="services">
+        <div class="services-intro">
+            <h2>Our Expert Services</h2>
+            <p>Providing top-tier HVAC solutions for Ocean County and beyond.</p>
+        </div>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h3>Air Conditioning</h3>
+                <p>Complete AC installation, repair, and seasonal maintenance to keep your home cool.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔥</div>
+                <h3>Heating Systems</h3>
+                <p>Expert furnace and heat pump services designed to ensure your family stays warm.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3>Maintenance</h3>
+                <p>Preventative care programs to extend the life of your equipment and reduce bills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>📍 Serving Ocean County & Surrounding Areas</p>
+                <p>📞 Phone: 732-714-2424</p>
+            </div>
+            <div class="contact-info">
+                <h3>Ready to Start?</h3>
+                <p>Schedule your seasonal maintenance or get a free estimate on a new system today.</p>
+                <a href="tel:7327142424" class="btn-blue" style="margin-top: 20px;">CALL NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Extreme Air Heating & Cooling, LLC. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
